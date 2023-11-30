@@ -178,7 +178,7 @@ footer {
 
   @media screen and (max-width: 600px) {
     main {
-        padding: 50px 0 30px 5px;
+        padding: 50px 5px 30px 0px;
     }
 
     #header {
@@ -197,18 +197,7 @@ footer {
     }
 
     nav {
-        min-width: unset;
-        max-width: unset;
-        width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-        font-size: 16px;
+        display: none;
     }
 
     fieldset {
@@ -218,7 +207,6 @@ footer {
 
     section > header {
         font-size: 30px;
-        margin-bottom: 10px;
     }
 
     img {
