@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Advanced Programming</title>
 </head>
+
 <body>
     <header id='header'>
         <h1 id='cpp'>C++</h1>
@@ -26,34 +28,42 @@
     <main id='main-doc'>
         <section class='main-section' id='Introduction'>
             <header>Introduction</header>
-    
-            <p>This course by is designed for software engineers, programmers and analysts who have been designing and creating programs using C++ and desire a higher level of technical detail to allow them more flexibility and productivity when writing C++ programs.</p>
-    
-            <p>This course is also designed for anyone desiring the ability to read and understand complex C++ programs for maintenance or learning purposes.</p>
-    
+
+            <p>This course by is designed for software engineers, programmers and analysts who have been designing and
+                creating programs using C++ and desire a higher level of technical detail to allow them more flexibility
+                and productivity when writing C++ programs.</p>
+
+            <p>This course is also designed for anyone desiring the ability to read and understand complex C++ programs
+                for maintenance or learning purposes.</p>
+
         </section>
         <hr />
         <section class='main-section' id='Arrays'>
             <header>Arrays</header>
-    
-            <p>An <span class='array'>array</span> is a collection of a fixed number of components all of the same data type. A
-                one-dimensional <span class='array'>array</span> is an <span class='array'>array</span> in which the components are arranged in a list form. <span class='info'>(This section discusses only one-dimensional arrays).</span></p>
-    
+
+            <p>An <span class='array'>array</span> is a collection of a fixed number of components all of the same data
+                type. A
+                one-dimensional <span class='array'>array</span> is an <span class='array'>array</span> in which the
+                components are arranged in a list form. <span class='info'>(This section discusses only one-dimensional
+                    arrays).</span></p>
+
             <fieldset>
                 <legend>The general form for declaring a one-dimensional array is:</legend>
                 <code>dataType arrayName[intExp];</code>
             </fieldset>
-    
-            <p>in which <code class='ex'>intExp</code> is any constant expression that evaluates to a positive integer. Also,
-                <code class='ex'>intExp</code> specifies the number of components in the <span class='array'>array</span>.
+
+            <p>in which <code class='ex'>intExp</code> is any constant expression that evaluates to a positive integer.
+                Also,
+                <code class='ex'>intExp</code> specifies the number of components in the <span
+                    class='array'>array</span>.
             </p>
-    
+
             <fieldset>
                 <legend>You can also declare arrays as follows:</legend>
-                <code>const int ARRAY_SIZE = 10;<br />
+                <code>const int ARRAY_SIZE = 8;<br />
                     int list[ARRAY_SIZE];</code>
             </fieldset>
-    
+
             <p>That is, you can first declare a named constant and then use the value of the named
                 constant to declare an <span class='array'>array</span> and specify its size.
             </p>
@@ -61,25 +71,60 @@
             <h2>Array Usage:</h2>
 
             <p><span class='array'>Arrays</span> are powerful tools for data storage and retrieval.
-                 Elements within an <span class='array'>array</span> are accessed using their indices,
-                  starting from 0.<br /> For instance, in an <span class='array'>array</span> named "list",
-                   the first element is <code class='ex'>list[0]</code>,
-                    the second is <code class='ex'>list[1]</code>, and so on.
+                Elements within an <span class='array'>array</span> are accessed using their indices,
+                starting from 0.<br /><br /> For instance, in an <span class='array'>array</span> named "list",
+                the first element is <code class='ex'>list[0]</code>,
+                the second is <code class='ex'>list[1]</code>, and so on.
             </p>
-    
+
+            <img id='array_image' src='https://i.imgur.com/osGS0su.png' />
+            <br />
+            <br />
+            <h2>Array Initialization:</h2>
+
+            <p>You can initialize an <span class='array'>array</span> at the time of declaration,
+                providing initial values for its elements.</p>
+
+            <fieldset>
+                <legend>Example of Array Initialization:</legend>
+                <code>
+                        int list[] = {1, 4, 3, 8, 4};
+                    </code>
+            </fieldset>
+
+            <p>This syntax allows you to specify the initial values for each element, and the compiler will
+                automatically determine the size based on the number of provided values.</p>
+            <br />
+            <h2>Multidimensional Arrays:</h2>
+
+            <p>C++ supports multidimensional arrays, allowing you to create matrices or grids with more than one
+                dimension:</p>
+
+            <fieldset>
+                <legend>Example of Multidimensional Array:</legend>
+                <code>
+                        int matrix[3][3];
+                    </code>
+            </fieldset>
+            <p>This defines a 3x3 matrix which can be visualized like this:</p>
+            <img id='matrix_image' src='https://i.imgur.com/TISVpbz.png' />
+
+            <p>These arrays are useful for representing data as tables or grids where elements are organized in rows and
+                columns.</p>
         </section>
         <hr />
         <section class='main-section' id='Structs'>
             <header>Records(Structs)</header>
-    
+
             <p><code class='ex'>struct:</code> A collection of a fixed number of components in which the components are
                 accessed by name. The components may be of different types.</p>
-    
-            <p>The components of a <code class='ex'>struct</code> are called the members of the <code class='ex'>struct.</code></p>
-    
+
+            <p>The components of a <code class='ex'>struct</code> are called the members of the <code
+                    class='ex'>struct.</code></p>
+
             <fieldset>
                 <legend>The general syntax
-                    of a <code class="ex">struct</code> in C++ is:</legend>
+                    of a struct in C++ is:</legend>
                 <code>
                     struct structName<br />
                     {<br />
@@ -91,16 +136,19 @@
                     dataTypen identifiern;<br />
                     };
                 </code>
-    
+
             </fieldset>
-    
-            <p><span class='info'>In C++, <code class="ex">struct</code> is a reserved word.</span> The members of a <code class="ex">struct</code>, even though they
+
+            <p><span class='info'>In C++, <code class="ex">struct</code> is a reserved word.</span> The members of a
+                <code class="ex">struct</code>, even though they
                 are enclosed in braces (that is, they form a block), are not considered to form a
-                compound statement.</p>
-    
-            <p>Thus, a semicolon (after the right brace) is essential to end the <code class='ex'>struct</code> statement. A semicolon at the end of the <code class='ex'>struct</code> definition is, therefore, a
+                compound statement.
+            </p>
+
+            <p>Thus, a semicolon (after the right brace) is essential to end the <code class='ex'>struct</code>
+                statement. A semicolon at the end of the <code class='ex'>struct</code> definition is, therefore, a
                 part of the syntax.</p>
-    
+
             <fieldset>
                 <legend>The statement:</legend>
                 <code>
@@ -117,26 +165,81 @@
                     };<br />
                 </code>
             </fieldset>
-    
-            <p>defines a <code class='ex'>struct</code> <code class='ex'>houseType</code> with 8 members. The member style is of type <code class='ex'>string</code>,
+
+            <p>defines a <code class='ex'>struct</code> <code class='ex'>houseType</code> with 8 members. The member
+                style is of type <code class='ex'>string</code>,
                 the members <code class='ex'>numOfBedrooms, numOfBathrooms, numOfCarsGarage, yearBuilt</code>, and
-                <code class='ex'>finishedSquareFootage</code> are of type <code class='ex'>int</code>, and the members <code class='ex'>price </code>and <code class='ex'>tax</code> are of type
+                <code class='ex'>finishedSquareFootage</code> are of type <code class='ex'>int</code>, and the members
+                <code class='ex'>price </code>and <code class='ex'>tax</code> are of type
                 <code class='ex'>double</code>.
             </p>
-    
-            <p>Like any type definition, a <code class='ex'>struct</code> is a definition, not a declaration. That is, it defines
+
+            <p>Like any type definition, a <code class='ex'>struct</code> is a definition, not a declaration. That is,
+                it defines
                 only a data type; no memory is allocated.</p>
-    
+
             <p>Once a data type is defined, you can declare variables of that type.</p>
-    
+
+            <h2>Struct Initialization:</h2>
+
+            <p>You can initialize a <code class='ex'>struct</code> at the time of declaration, providing values for its members:</p>
+
+            <fieldset>
+                <legend>Example of Struct Initialization:</legend>
+                <code>
+                struct houseType <br />{ <br />
+                    string style = "Modern"; <br />
+                    int numOfBedrooms = 3; <br />
+                    int numOfBathrooms = 2; <br />
+                    int numOfCarsGarage = 2; <br />
+                    int yearBuilt = 2022; <br />
+                    int finishedSquareFootage = 2000; <br />
+                    double price = 250000.00; <br />
+                    double tax = 5000.00; <br />
+                };
+            </code>
+            </fieldset>
+
+            <p>This allows you to set default values for the members of the <code class='ex'>struct</code> at the time of declaration.</p>
+
+            <h2>Accessing Struct Members:</h2>
+
+            <p>To access the members of a <code class='ex'>struct</code>, use the dot notation:</p>
+
+            <fieldset>
+                <legend>Example of Accessing Struct Members:</legend>
+                <code>
+                // Create an instance of the struct<br />
+                houseType myHouse;<br />
+                <br />
+                // Access and modify struct members<br />
+                myHouse.style = "Traditional";<br />
+                myHouse.numOfBedrooms = 4;<br />
+            </code>
+            </fieldset>
+
+            <p>Here, we create an instance of the <code class='ex'>struct</code> and then access and modify its members using the dot notation.
+            </p>
+
+            <h2>Additional Notes on Structs:</h2>
+
+            <p>A <code class='ex'>struct</code> in C++ are similar to <span class='class'>classes</span> but with some key differences. Unlike <span class='class'>classes</span>, <code class='ex'>structs</code> default to
+                public access for their members. They are often used for simple data structures or when a
+                lightweight object is needed.</p>
+
+            <p>While <span class='class'>classes</span> are typically used for more complex scenarios with member functions and encapsulation,
+                <code class='ex'>structs</code> are suitable for holding data without additional behaviors.</p>
+
         </section>
         <hr />
         <section class='main-section' id='Classes'>
             <header>Classes</header>
-    
-            <p>A <span class='class'>class</span> is a collection of a fixed number of components. The components of a <span class='class'>class </span>are
-                called the members of the <span class='class'>class</span>.</p>
-    
+
+            <p>A <span class='class'>class</span> is a collection of a fixed number of components. The components of a
+                <span class='class'>class </span>are
+                called the members of the <span class='class'>class</span>.
+            </p>
+
             <fieldset>
                 <legend>The general syntax for defining a class is:</legend>
                 <code>
@@ -146,21 +249,23 @@
                     };</br>
                 </code>
             </fieldset>
-    
-            <p>in which <code class='ex'>classMembersList</code> consists of variable declarations and/or functions. That is,
-                a member of a <span class='class'>class</span> can be either a variable (to store data) or a function.</p>
+
+            <p>in which <code class='ex'>classMembersList</code> consists of variable declarations and/or functions.
+                That is,
+                a member of a <span class='class'>class</span> can be either a variable (to store data) or a function.
+            </p>
             <br />
             <ul class='info'>
                 <li>If a member of a class is a variable, you declare it just like any other
                     variable. Also, in the definition of the class, you cannot initialize a
                     variable when you declare it.
                 </li>
-    
+
                 <li>If a member of a class is a function, you typically use the function
                     prototype to declare that member.
-    
+
                 </li>
-    
+
                 <li>If a member of a class is a function, it can (directly) access any member of the
                     class—member variables and member functions.</br> That is, when you write
                     the definition of a member function, you can directly access any member
@@ -168,36 +273,43 @@
                     condition is that you must declare an identifier before you can use it.
                 </li>
             </ul>
-    
-            <p>In C++, <span class='class'>class</span> is a reserved word, and it defines only a data type; no memory is
-                allocated. It announces the declaration of a <span class='class'>class</span>. Moreover, note the semicolon (<code class='ex'>;</code>) after
+
+            <p>In C++, <span class='class'>class</span> is a reserved word, and it defines only a data type; no memory
+                is
+                allocated. It announces the declaration of a <span class='class'>class</span>. Moreover, note the
+                semicolon (<code class='ex'>;</code>) after
                 the right brace. The semicolon is part of the syntax. A missing semicolon, therefore, will
                 result in a syntax error.</p>
-    
+
             <p>The members of a <span class='class'>class</span> are classified into three categories: <code class='ex'>private, public, and
                     protected.</code></p>
-    
-            <p>In C++, <code class='ex'>private, protected, and public</code> are reserved words and are called <span class='class'>member
+
+            <p>In C++, <code class='ex'>private, protected, and public</code> are reserved words and are called <span
+                    class='class'>member
                     access specifiers.</span></p>
-    
-            <p>Following are some facts about <code class='ex'>public and private</code> members of a <span class='class'>class</span>:</p>
-    
+
+            <p>Following are some facts about <code class='ex'>public and private</code> members of a <span
+                    class='class'>class</span>:</p>
+
             <ul>
                 <li>
                     By default, all members of a <span class='class'>class</span> are private.
                 </li>
-    
+
                 <li>
-                    If a member of a <span class='class'>class</span> is <code class='ex'>private</code>, you cannot access it outside of the
+                    If a member of a <span class='class'>class</span> is <code class='ex'>private</code>, you cannot
+                    access it outside of the
                     <span class='class'>class</span>.
                 </li>
-    
+
                 <li>
-                    A <code class='ex'>public</code> member is accessible outside of the <span class='class'>class</span>.
+                    A <code class='ex'>public</code> member is accessible outside of the <span
+                        class='class'>class</span>.
                 </li>
-    
+
                 <li>
-                    To make a member of a <span class='class'>class</span> <code class='ex'>public</code>, you use the <span class='class'>member access
+                    To make a member of a <span class='class'>class</span> <code class='ex'>public</code>, you use the
+                    <span class='class'>member access
                         specifier</span> <code class='ex'>public</code> with a colon, <code class='ex'>:</code>.
                 </li>
             </ul>
@@ -205,35 +317,44 @@
         <hr />
         <section class='main-section' id='Inheritence'>
             <header>Inheritence</header>
-    
-            <p>Suppose that you want to design a <span class='class'>class</span>, <code class='ex'>partTimeEmployee</code>, to implement and
+
+            <p>Suppose that you want to design a <span class='class'>class</span>, <code
+                    class='ex'>partTimeEmployee</code>, to implement and
                 process the characteristics of a part-time employee.<br /> The main features associated with
                 a part-time employee are the name, pay rate, and number of hours worked.</p>
-    
+
             <p>Every part-time employee is a person. Therefore, rather than design the <span class='class'>class</span>
                 <code class='ex'>partTimeEmployee</code> from scratch, we want to be able to extend the definition of
-                the <span class='class'>class</span> <code class='ex'>personType</code> by adding additional members (data
+                the <span class='class'>class</span> <code class='ex'>personType</code> by adding additional members
+                (data
                 and/or functions).
             </p>
-    
-            <p>Inheritance lets us create new <span class='class'>classes</span> from existing <span class='class'>classes</span>. The new <span class='class'>classes </span> that we create
-                from the existing <span class='class'>classes</span> are called the <span class='class'>derived classes</span>; the existing <span class='class'>classes </span>are called the <span class='class'>base classes</span>.<br /> The <span class='class'>derived classes</span> inherit the properties of the <span class='class'>base classes</span>. So rather than
-                create completely new <span class='class'>classes</span> from scratch, we can take advantage of inheritance and
+
+            <p>Inheritance lets us create new <span class='class'>classes</span> from existing <span
+                    class='class'>classes</span>. The new <span class='class'>classes </span> that we create
+                from the existing <span class='class'>classes</span> are called the <span class='class'>derived
+                    classes</span>; the existing <span class='class'>classes </span>are called the <span
+                    class='class'>base classes</span>.<br /> The <span class='class'>derived classes</span> inherit the
+                properties of the <span class='class'>base classes</span>. So rather than
+                create completely new <span class='class'>classes</span> from scratch, we can take advantage of
+                inheritance and
                 reduce software complexity.</p>
-    
+
             <p>Inheritance can be viewed as a treelike, or hierarchical, structure wherein a base class is
                 shown with its <span class='class'>derived classes</span>.</p>
-    
+
             <fieldset>
                 <legend>Consider the following tree diagram:</legend>
-                <img src='https://tinyurl.com/ze62u4r9'>
-    
-                <p>In this diagram, shape is the <span class='class'>base class</span>.<br /> The <span class='class'>classes</span> circle and rectangle are
-                    derived from shape, and the <span class='class'>class</span> square is derived from rectangle.<br /> Every
+                <img id='inherit_image' src='https://i.imgur.com/d2c2VHS.png'>
+
+                <p>In this diagram, shape is the <span class='class'>base class</span>.<br /> The <span
+                        class='class'>classes</span> circle and rectangle are
+                    derived from shape, and the <span class='class'>class</span> square is derived from rectangle.<br />
+                    Every
                     circle and every rectangle is a shape. Every square is a rectangle.</p>
-    
+
             </fieldset>
-    
+
             <fieldset>
                 <legend>The general syntax of a derived class is:</legend>
                 <code>
@@ -243,64 +364,73 @@
                     };<br />
                 </code>
             </fieldset>
-    
-            <p>in which <code class='ex'>memberAccessSpecifier</code> is <code class='ex'>public, protected</code>, or <code class='ex'>private</code>. When no
-                <code class='ex'>memberAccessSpecifier</code> is specified, it is assumed to be a <code class='ex'>private</code> inheritance.
+
+            <p>in which <code class='ex'>memberAccessSpecifier</code> is <code class='ex'>public, protected</code>, or
+                <code class='ex'>private</code>. When no
+                <code class='ex'>memberAccessSpecifier</code> is specified, it is assumed to be a <code
+                    class='ex'>private</code> inheritance.
             </p>
-    
-            <p><span class='info'>The following facts about the base and the derived classes should be kept in mind.</span></p>
-    
+
+            <p><span class='info'>The following facts about the base and the derived classes should be kept in
+                    mind.</span></p>
+
             <ol><span class='info'>
                     <li>The private members of a base class are private to the base class;
                         hence, the members of the derived class cannot directly access them. In
                         other words, when you write the definitions of the member functions of
                         the derived class, you cannot directly access the private members of
                         the base class.</li>
-    
+
                     <li>The private members of a base class are private to the base class;
                         hence, the members of the derived class cannot directly access them. In
                         other words, when you write the definitions of the member functions of
                         the derived class, you cannot directly access the private members of
                         the base class.</li>
-    
+
                     <li>The derived class can include additional members—data and/or functions.</li>
-    
+
                     <li>The derived class can redefine the public member functions of the base
                         class. That is, in the derived class, you can have a member function with
                         the same name, number, and types of parameters as a function in the
                         base class. However, this redefinition applies only to the objects of the
                         derived class, not to the objects of the base class.</li>
-    
+
                     <li>All member variables of the base class are also member variables of
                         the derived class. Similarly, the member functions of the base class
                         (unless redefined) are also member functions of the derived class.
                         (Remember Rule 1 when accessing a member of the base class in the
                         derived class.)</li>
             </ol>
-    
+
         </section>
         <hr />
         <section class='main-section' id='Pointers'>
             <header>Pointers</header>
-    
+
             <p>A <span class='pointer'>pointer</span> variable is a variable whose content is an address,
                 (that is, a memory location).</p>
-    
-            <p>The values belonging to <span class='pointer'>pointer</span> data types are the memory addresses of your computer.</p>
-    
-            <p>As in many other languages, there is no name associated with the <span class='pointer'>pointer</span> data type in
-                C++. Because the domain—that is, the set of values of a <span class='pointer'>pointer</span> data type—is the
+
+            <p>The values belonging to <span class='pointer'>pointer</span> data types are the memory addresses of your
+                computer.</p>
+
+            <p>As in many other languages, there is no name associated with the <span class='pointer'>pointer</span>
+                data type in
+                C++. Because the domain—that is, the set of values of a <span class='pointer'>pointer</span> data
+                type—is the
                 addresses (memory locations)</p>
-    
-            <p>The value of a <span class='pointer'>pointer</span> variable is an address. That is, the value refers to another memory
+
+            <p>The value of a <span class='pointer'>pointer</span> variable is an address. That is, the value refers to
+                another memory
                 space.<br /> The data is typically stored in this memory space.<br /> Therefore, when you declare a
-                <span class='pointer'>pointer</span> variable, you also specify the data type of the value to be stored in the memory
+                <span class='pointer'>pointer</span> variable, you also specify the data type of the value to be stored
+                in the memory
                 location pointed to by the <span class='pointer'>pointer</span> variable.
             </p>
-    
-            <p>In C++, you declare a <span class='pointer'>pointer</span> variable by using the asterisk symbol (<code class='ex'>*</code>) between the data
+
+            <p>In C++, you declare a <span class='pointer'>pointer</span> variable by using the asterisk symbol (<code
+                    class='ex'>*</code>) between the data
                 type and the variable name.</p>
-    
+
             <fieldset>
                 <legend>The general syntax to declare a pointer variable is:</legend>
                 <code>
@@ -309,20 +439,23 @@
             </fieldset>
             <fieldset>
                 <legend>Example:</legend>
-    
+
                 <code>
                     int *p;<br />
                     char *ch;
                 </code>
             </fieldset>
-    
-            <p>both <code class='ex'>p</code> and <code class='ex'>ch</code> are <span class='pointer'>pointer</span> variables. The content of <code>p</code> (when
-                properly assigned) points to a memory location of type <code class='ex'>int</code>, and the content of <code class='ex'>ch</code>
+
+            <p>both <code class='ex'>p</code> and <code class='ex'>ch</code> are <span class='pointer'>pointer</span>
+                variables. The content of <code>p</code> (when
+                properly assigned) points to a memory location of type <code class='ex'>int</code>, and the content of
+                <code class='ex'>ch</code>
                 points to a memory location of type <code class='ex'>char</code>.
-    
+
             <p>Usually, <code class='ex'>p</code> is called a <span class='pointer'>pointer</span> variable of
-                type <code class='ex'>int</code>, and <code class='ex'>ch</code> is called a <span class='pointer'>pointer</span> variable of type <code class='ex'>char</code>.</p>
-    
+                type <code class='ex'>int</code>, and <code class='ex'>ch</code> is called a <span
+                    class='pointer'>pointer</span> variable of type <code class='ex'>char</code>.</p>
+
             <fieldset>
                 <legend>The statement:</legend>
                 <code>int *p;</code><br />
@@ -330,29 +463,31 @@
                 <code>int * p;</code><br />
                 Thus, the character * can appear anywhere between the data type name and the variable name.
             </fieldset>
-    
+
         </section>
     </main>
-    
+
     <footer>
         <div id='social-icons'>
             <a id='profile-link' href='https://github.com/ZaidQtaish' target="_blank">
-              <i class='fa fa-github fa-3x' aria-hidden="true"></i>
+                <i class='fa fa-github fa-3x' aria-hidden="true"></i>
             </a>
-      
+
             <a href='https://jo.linkedin.com/in/zaid-qtaish-11a3b8272' target="_blank">
-              <i class='fa fa-linkedin-square fa-3x' aria-hidden="true"></i>
+                <i class='fa fa-linkedin-square fa-3x' aria-hidden="true"></i>
             </a>
-      
+
             <a href='https://codepen.io/xFxdedFade' target="_blank">
-              <i class='fa fa-codepen fa-3x' aria-hidden="true"></i>
+                <i class='fa fa-codepen fa-3x' aria-hidden="true"></i>
             </a>
-      
+
             <a href='mailto: enderzaide@gmail.com' target="_blank">
-              <i class='fa fa-envelope fa-3x' aria-hidden='true'></i>
+                <i class='fa fa-envelope fa-3x' aria-hidden='true'></i>
             </a>
-          </div>
+        </div>
     </footer>
-    </body>
-    </html>
+</body>
+
+</html>
+
 </html>
