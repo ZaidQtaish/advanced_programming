@@ -20,7 +20,7 @@
                 <li><a class='nav-link' href='#Arrays'>Arrays</a></li>
                 <li><a class='nav-link' href='#Structs'>Structs</a></li>
                 <li><a class='nav-link' href='#Classes'>Classes</a></li>
-                <li><a class='nav-link' href='#Inheritence'>Inheritence</a></li>
+                <li><a class='nav-link' href='#Inheritance'>Inheritance</a></li>
                 <li><a class='nav-link' href='#Pointers'>Pointers</a></li>
             </ul>
     </header>
@@ -77,7 +77,7 @@
                 the second is <code class='ex'>list[1]</code>, and so on.
             </p>
 
-            <img id='array_image' src='https://i.imgur.com/osGS0su.png' />
+            <img id='array_image' src='https://i.imgur.com/HgDIK7I.png' />
             <br />
             <br />
             <h2>Array Initialization:</h2>
@@ -182,7 +182,8 @@
 
             <h2>Struct Initialization:</h2>
 
-            <p>You can initialize a <code class='ex'>struct</code> at the time of declaration, providing values for its members:</p>
+            <p>You can initialize a <code class='ex'>struct</code> at the time of declaration, providing values for its
+                members:</p>
 
             <fieldset>
                 <legend>Example of Struct Initialization:</legend>
@@ -200,7 +201,8 @@
             </code>
             </fieldset>
 
-            <p>This allows you to set default values for the members of the <code class='ex'>struct</code> at the time of declaration.</p>
+            <p>This allows you to set default values for the members of the <code class='ex'>struct</code> at the time
+                of declaration.</p>
 
             <h2>Accessing Struct Members:</h2>
 
@@ -218,105 +220,93 @@
             </code>
             </fieldset>
 
-            <p>Here, we create an instance of the <code class='ex'>struct</code> and then access and modify its members using the dot notation.
+            <p>Here, we create an instance of the <code class='ex'>struct</code> and then access and modify its members
+                using the dot notation.
             </p>
 
             <h2>Additional Notes on Structs:</h2>
 
-            <p>A <code class='ex'>struct</code> in C++ are similar to <span class='class'>classes</span> but with some key differences. Unlike <span class='class'>classes</span>, <code class='ex'>structs</code> default to
+            <p>A <code class='ex'>struct</code> in C++ are similar to <span class='class'>classes</span> but with some
+                key differences. Unlike <span class='class'>classes</span>, <code class='ex'>structs</code> default to
                 public access for their members. They are often used for simple data structures or when a
                 lightweight object is needed.</p>
 
-            <p>While <span class='class'>classes</span> are typically used for more complex scenarios with member functions and encapsulation,
-                <code class='ex'>structs</code> are suitable for holding data without additional behaviors.</p>
+            <p>While <span class='class'>classes</span> are typically used for more complex scenarios with member
+                functions and encapsulation,
+                <code class='ex'>structs</code> are suitable for holding data without additional behaviors.
+            </p>
 
         </section>
         <hr />
         <section class='main-section' id='Classes'>
             <header>Classes</header>
 
-            <p>A <span class='class'>class</span> is a collection of a fixed number of components. The components of a
-                <span class='class'>class </span>are
-                called the members of the <span class='class'>class</span>.
-            </p>
+            <p>A <span class='class'>class</span> is a fundamental concept in C++ that allows you to define a blueprint
+                for creating objects. <br /><br />
+                Objects are instances of <span class='class'>classes</span>,
+                and they store data and the operations
+                that can be performed on that data.</p>
+
+            <p>The general syntax for defining a <span class='class'>class</span> is:</p>
 
             <fieldset>
-                <legend>The general syntax for defining a class is:</legend>
+                <legend>Class Definition:</legend>
                 <code>
-                    class classIdentifier</br>
-                    {</br>
-                    classMembersList</br>
-                    };</br>
+                    class ClassName<br />
+                    {<br />
+                        // Class members (variables and functions)<br />
+                    };<br />
                 </code>
             </fieldset>
 
-            <p>in which <code class='ex'>classMembersList</code> consists of variable declarations and/or functions.
-                That is,
-                a member of a <span class='class'>class</span> can be either a variable (to store data) or a function.
-            </p>
-            <br />
-            <ul class='info'>
-                <li>If a member of a class is a variable, you declare it just like any other
-                    variable. Also, in the definition of the class, you cannot initialize a
-                    variable when you declare it.
-                </li>
+            <p>A <span class='class'>class</span> can have member variables (data members) and member
+                functions.<br /><br />
+                Member variables represent the state of the object,
+                while member functions define the behavior of the object.</p>
 
-                <li>If a member of a class is a function, you typically use the function
-                    prototype to declare that member.
-
-                </li>
-
-                <li>If a member of a class is a function, it can (directly) access any member of the
-                    class—member variables and member functions.</br> That is, when you write
-                    the definition of a member function, you can directly access any member
-                    variable of the class without passing it as a parameter.</br> The only obvious
-                    condition is that you must declare an identifier before you can use it.
-                </li>
-            </ul>
-
-            <p>In C++, <span class='class'>class</span> is a reserved word, and it defines only a data type; no memory
-                is
-                allocated. It announces the declaration of a <span class='class'>class</span>. Moreover, note the
-                semicolon (<code class='ex'>;</code>) after
-                the right brace. The semicolon is part of the syntax. A missing semicolon, therefore, will
-                result in a syntax error.</p>
-
-            <p>The members of a <span class='class'>class</span> are classified into three categories: <code class='ex'>private, public, and
-                    protected.</code></p>
-
-            <p>In C++, <code class='ex'>private, protected, and public</code> are reserved words and are called <span
-                    class='class'>member
-                    access specifiers.</span></p>
-
-            <p>Following are some facts about <code class='ex'>public and private</code> members of a <span
-                    class='class'>class</span>:</p>
+            <p>By default, all members of a <span class='class'>class</span> are private,
+                meaning they are not accessible outside the <span class='class'>class</span>.<br /><br />
+                You can use access specifiers to control the visibility of members:</p>
 
             <ul>
-                <li>
-                    By default, all members of a <span class='class'>class</span> are private.
-                </li>
-
-                <li>
-                    If a member of a <span class='class'>class</span> is <code class='ex'>private</code>, you cannot
-                    access it outside of the
-                    <span class='class'>class</span>.
-                </li>
-
-                <li>
-                    A <code class='ex'>public</code> member is accessible outside of the <span
-                        class='class'>class</span>.
-                </li>
-
-                <li>
-                    To make a member of a <span class='class'>class</span> <code class='ex'>public</code>, you use the
-                    <span class='class'>member access
-                        specifier</span> <code class='ex'>public</code> with a colon, <code class='ex'>:</code>.
-                </li>
+                <li><code class='ex'>private:</code> - Members are accessible only within the <span class='class'>class</span> (default).</li>
+                <li><code class='ex'>public:</code> - Members are accessible from outside the <span class='class'>class</span>.</li>
+                <li><code class='ex'>protected:</code> - Similar to private but allows access in derived <span class='class'>classes</span>.</li>
             </ul>
+            <br />
+            <p>Here's an example of a simple <span class='class'>class</span>:</p>
+
+            <fieldset>
+                <legend>Example Class:</legend>
+                <code>
+                    class Car<br />
+                    {<br />
+                        private:<br />
+                            int speed;<br />
+                            bool engineRunning;<br /><br />
+                        public:<br />
+                            void StartEngine();<br />
+                            void Accelerate(int amount);<br />
+                    };<br />
+                </code>
+            </fieldset>
+
+            <p>In this example, the <code class='ex'>Car</code> <span class='class'>class</span> has <code class='ex'>private</code> member variables (<code
+                    class='ex'>speed</code> and <code class='ex'>engineRunning</code>) and <code class='ex'>public</code> member functions
+                (<code class='ex'>StartEngine</code> and <code class='ex'>Accelerate</code>).</p>
+
+            <p>Objects of the <code class='ex'>Car</code> <span class='class'>class</span> can be created,
+                 and their behavior can be controlled
+                through the <code class='ex'>public</code> member functions.</p>
+
+            <p><span class='class'>Classes</span> are the building blocks of object-oriented programming,
+                 providing a way to structure and organize
+                code in a modular and reusable manner.</p>
         </section>
+
         <hr />
-        <section class='main-section' id='Inheritence'>
-            <header>Inheritence</header>
+        <section class='main-section' id='inheritance'>
+            <header>Inheritance</header>
 
             <p>Suppose that you want to design a <span class='class'>class</span>, <code
                     class='ex'>partTimeEmployee</code>, to implement and
@@ -337,10 +327,9 @@
                     class='class'>base classes</span>.<br /> The <span class='class'>derived classes</span> inherit the
                 properties of the <span class='class'>base classes</span>. So rather than
                 create completely new <span class='class'>classes</span> from scratch, we can take advantage of
-                inheritance and
-                reduce software complexity.</p>
+                inheritance and reduce software complexity.</p>
 
-            <p>Inheritance can be viewed as a treelike, or hierarchical, structure wherein a base class is
+            <p>Inheritance can be viewed as a treelike, or hierarchical, structure wherein a <span class='class'>base class</span> is
                 shown with its <span class='class'>derived classes</span>.</p>
 
             <fieldset>
@@ -371,35 +360,31 @@
                     class='ex'>private</code> inheritance.
             </p>
 
-            <p><span class='info'>The following facts about the base and the derived classes should be kept in
+            <p><span class='info'>The following facts about the base and the derived <span class='class'>classes</span> should be kept in
                     mind.</span></p>
 
             <ol><span class='info'>
-                    <li>The private members of a base class are private to the base class;
-                        hence, the members of the derived class cannot directly access them. In
-                        other words, when you write the definitions of the member functions of
-                        the derived class, you cannot directly access the private members of
-                        the base class.</li>
+                    <li>The <code class='ex'>private</code> members of a <span class='class'>base class</span> are <code class='ex'>private</code> to the <span class='class'>base class</span>;
+                        hence, the members of the <span class='class'>derived class</span> cannot directly access them.<br />
+                        In other words, when you write the definitions of the member functions of
+                        the <span class='class'>derived class</span>, you cannot directly access the <code class='ex'>private</code> members of
+                        the <span class='class'>base class</span>.</li>
 
-                    <li>The private members of a base class are private to the base class;
-                        hence, the members of the derived class cannot directly access them. In
-                        other words, when you write the definitions of the member functions of
-                        the derived class, you cannot directly access the private members of
-                        the base class.</li>
+                    <li>The <span class='class'>derived class</span> can include additional members—data and/or functions.</li>
 
-                    <li>The derived class can include additional members—data and/or functions.</li>
-
-                    <li>The derived class can redefine the public member functions of the base
-                        class. That is, in the derived class, you can have a member function with
+                    <li>The <span class='class'>derived class</span> can redefine the <code class='ex'>public</code> member functions of the
+                        <span class='class'>base class</span>.<br />
+                        That is, in the <span class='class'>derived class</span>, you can have a member function with
                         the same name, number, and types of parameters as a function in the
-                        base class. However, this redefinition applies only to the objects of the
-                        derived class, not to the objects of the base class.</li>
+                        <span class='class'>base class</span>.<br />
+                        However, this redefinition applies only to the objects of the
+                        <span class='class'>derived class</span>, not to the objects of the <span class='class'>base class</span>.</li>
 
-                    <li>All member variables of the base class are also member variables of
-                        the derived class. Similarly, the member functions of the base class
-                        (unless redefined) are also member functions of the derived class.
-                        (Remember Rule 1 when accessing a member of the base class in the
-                        derived class.)</li>
+                    <li>All member variables of the <span class='class'>base class</span> are also member variables of
+                        the <span class='class'>derived class</span>. <br /> Similarly, the member functions of the <span class='class'>base class</span>
+                        (unless redefined) are also member functions of the <span class='class'>derived class</span>. <br />
+                        (Remember Rule 1 when accessing a member of the <span class='class'>base class</span> in the
+                        <span class='class'>derived class</span>.)</li>
             </ol>
 
         </section>
@@ -473,7 +458,7 @@
                 <i class='fa fa-github fa-3x' aria-hidden="true"></i>
             </a>
 
-            <a href='https://jo.linkedin.com/in/zaid-qtaish-11a3b8272' target="_blank">
+            <a href='https://linkedin.com/in/zaid-qtaish' target="_blank">
                 <i class='fa fa-linkedin-square fa-3x' aria-hidden="true"></i>
             </a>
 
